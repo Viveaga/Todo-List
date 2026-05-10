@@ -1,0 +1,57 @@
+<html>
+    <style>
+        body{
+            background-image:url(todopic.avif);
+            padding: 100px;
+            background-size: cover;
+        }
+        input{
+              width: 400px;
+              height: 100px;
+              font-size: 18px;
+              
+        }
+        td{
+            font-size: 28px;
+            padding: 10px 20px;
+        }
+        img{
+            width: 50px;
+        }
+        .pencil
+        {
+            width: 60px;
+        }
+    </style>
+</html>
+<body>
+<input id="input">
+<button id="add" onclick="addElement()"><img src="pencil.avif" id="pencil"></button>
+<table id="list">
+    <tr>
+        <td>
+            WakeUp
+        </td>
+        <td>   
+            <button onclick="deleteElement(event)"><img src="done.avif"></button>
+        </td>
+    </tr>    
+
+</table>
+<script>
+   var input1=document.getElementById("input")
+    var ul=document.getElementById("list")
+    function addElement()
+    {
+           var list=document.createElement("tr")
+           list.innerHTML="<td>"+input1.value+"</td>"+"<td>"+"<button onclick='deleteElement(event)'><img src='done.avif'></button>"+"</td>"
+           ul.append(list)
+
+    }
+    
+    function deleteElement(event)
+    {
+        event.target.closest("tr").remove()
+    }
+</script>
+</body>
