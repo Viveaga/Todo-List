@@ -1,0 +1,10 @@
+Task 2
+
+
+Basic Git Operations like
+Clone the repository.
+Create a new branch.
+Add a text file.
+Commit and push the changes.
+Create a Pull Request.
+Task 2 completed.
